@@ -1,0 +1,37 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Charity List</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <ion-list>
+  
+      <ion-card ion-item *ngFor="let charity of charities" class="card-style">
+          <div><img src={{charity.charityCardImg}} /></div>
+          <!-- <div class="card-title" color="dark">Elephant Aid International</div> -->
+          <ion-card-content>
+              <ion-card-title>
+                  <b>{{charity.name}}</b>
+              </ion-card-title>
+              <p>
+                  {{charity.description}}
+              </p>            
+          </ion-card-content>
+          <ion-row no-padding>
+              <ion-col>
+                  <button ion-button clear small color="danger" (click)="navigateToCharity(charity)" icon-start>
+                      <ion-icon name='ios-eye-outline'></ion-icon>
+                      Learn More...
+                  </button>
+              </ion-col>
+          </ion-row>
+
+      </ion-card>
+    </ion-list>
+  
+  </ion-content>

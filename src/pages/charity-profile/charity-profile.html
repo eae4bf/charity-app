@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title style="text-align:center">{{charity.name}}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <div>
+        <img style="text-align: center" src={{charity.logo}}/>
+        <p style="text-align:center"><b>{{charity.name}}</b></p>
+      </div>
+      <div>
+        <img style="text-align:center" src={{charity.charityImg}}/>
+      </div>
+      <div>
+          {{charity.deepDescription}}
+      </div>
+      <div>
+        Check out our website at: <a href="https://elephantaidinternational.org">"https://elephantaidinternational.org</a>.
+      </div>
+      <button ion-button color="secondary" outline icon-start (click)="navigateToPayment()">
+        <ion-icon name='ios-happy-outline'></ion-icon>
+        Donate
+      </button>
+    
+    
+    </ion-content>
