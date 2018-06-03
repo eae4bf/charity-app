@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App} from 'ionic-angular';
 import { User } from '../../models/user';
 import { CharityListPage } from '../charity-list/charity-list';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -13,12 +14,13 @@ export class ProfilePage {
 
   public user: User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private app: App) {
     this.user = new User();
+
   }
 
   navigateToHome() {
-    this.navCtrl.popToRoot();
+    this.app.getRootNav().setRoot(HomePage);
   }
 
   ionViewDidLoad() {

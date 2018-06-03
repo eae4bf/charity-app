@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegistrationPage } from '../registration/registration';
 
@@ -16,6 +16,7 @@ export class HomePage {
 
   navigateToLogin() {
     this.navCtrl.push(LoginPage);
+
   }
 
   navigateToRegistration() {
